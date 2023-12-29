@@ -22,27 +22,34 @@ EKF方法的小计算复杂度带来的简便性,在工程中,对于一些非线
 ### 一阶扩展卡尔曼滤波方法
 
 对于以下非线性系统:
+
 $$
     x_k = f(x_{k-1}) + w_{k-1}\\
     z_k = h(x_k) + v_k
 $$
+
 式中, $f(\cdot)$ 和 $h(\cdot)$ 为非线性方程;$w_{k-1}$和$v_k$为互不相关的高斯高斯白噪声,
 其噪声统计特性为:
+
 $$
 \begin{aligned}
     E[w_k] = 0, ~Cov[w_k,w_j] = Q_k\delta_{k,j}\\
     E[v_k] = 0, ~Cov[v_k,v_j] = R_k\delta_{k,j}
 \end{aligned}
 $$
+
 式中, $Q_k$ 为过程噪声方差矩阵; $R_k$ 为量测噪声方差阵.
 
 将非线性状态方程$f(\cdot)$在状态估计值$\hat{x}_{k-1}$附近展成一阶Taylor级数,可得
+
 $$
 \begin{aligned}
     f(x_{k-1})\approx f(\hat{x}_{k-1})+\frac{\partial f}{\partial x}\biggl\vert_{\hat{x}_{k-1}}\,(x_{k-1}-\hat{x}_{k-1}) + w_{k-1}
 \end{aligned}
 $$
+
 式中,
+
 $$
 \begin{aligned}
     \frac{\partial f}{\partial x}\bigg \vert_{\hat{x}_{k-1}} =
@@ -224,15 +231,15 @@ $$
 
 可以看出,在给定40s的时间范围内,应用扩展卡尔曼滤波,对系统状态进行最优最优估计,可以对目标的位置进行较好的估计,但是对速度和加速度的估计较差.
 
-<img src="fig/预测运动轨迹与真实轨迹三维.png" alt="三维预测运动轨迹与真实轨迹" style="zoom: 50%;" />
+<img src="fig/预测运动轨迹与真实轨迹三维.png" alt="三维预测运动轨迹与真实轨迹" style="zoom:20%;" />
 
-<img src="fig/三轴位置跟踪曲线.png" alt="三轴位置跟踪曲线" style="zoom:50%;" />
+<img src="fig/三轴位置跟踪曲线.png" alt="三轴位置跟踪曲线" style="zoom:20%;" />
 
-<img src="fig/位置误差曲线.png" alt="位置误差曲线" style="zoom:50%;" />
+<img src="fig/位置误差曲线.png" alt="位置误差曲线" style="zoom:20%;" />
 
-<img src="fig/速度误差曲线.png" alt="速度误差曲线" style="zoom:50%;" />
+<img src="fig/速度误差曲线.png" alt="速度误差曲线" style="zoom:20%;" />
 
-<img src="fig/加速度误差曲线.png" alt="加速度误差曲线" style="zoom:50%;" />
+<img src="fig/加速度误差曲线.png" alt="加速度误差曲线" style="zoom:20%;" />
 
 ## 附录
 
