@@ -61,13 +61,17 @@ $$
     \end{bmatrix}
 \end{aligned}
 $$
+
 同理,将非线性量测方程 $h_k(\cdot)$ 在状态估计值 $\hat{x}_{k|k-1}$ 附近展开成一阶Taylor级数,可得
+
 $$
 \begin{aligned}
     z_k \approx \left.\hat{h}(\hat{x}_{k}|_{k-1})+\frac{\partial\hat{h}}{\partial x}\right|_{\hat{x}_{k}|k-1} (x_{k}-\hat{x}_{k}|_{k-1})
 \end{aligned}
 $$
+
 式中,
+
 $$
 \begin{aligned}
     \frac{\partial h}{\partial x}\bigg \vert_{\hat{x}_{k|k-1}} =
@@ -79,13 +83,17 @@ $$
     \end{bmatrix}
 \end{aligned}
 $$
+
 令
+
 $$
 \begin{aligned}
     \left.\begin{array}{l}{{H_{k}=\left.\dfrac{\partial h}{\partial x}\right|_{\hat{x}_{k|k-1}}}}\\ {{\left.\zeta_{k}= h(\hat{x}_{k|k-1})-\dfrac{\partial h}{\partial x}\right|_{\hat{x}_{k|k-1}}\hat{x}_{k|k-1}}}\end{array} \right\}
 \end{aligned}
 $$
+
 则非线性量测方程的一阶线性化结果为:
+
 $$
 \begin{aligned}
     z_k = H_k x_k + \zeta_k +v_k
@@ -119,6 +127,7 @@ $$
 ### \"当前\"统计模型
 
 以地理系为参考坐标系,选取地理系下目标运动的位置$(x,y,z)$,速度$(v_x,v_y,v_z)$,加速度$(a_x,a_y,a_z)$为状态变量,有
+
 $$
 \begin{aligned}
     X = [x,y,z,v_x,v_y,v_z,a_x.a_y,a_z]
@@ -126,12 +135,15 @@ $$
 $$
 
 根据\"当前\"统计模型建立的目标运动离散化方程为
+
 $$
 \begin{aligned}
     X_k = \Phi_{k|k-1}X_{k-1} + U_{k-1}\bar{a_k} + w_k
 \end{aligned}
 $$
+
 其中,状态转移矩阵分别为
+
 $$
 \begin{aligned}
     \Phi_{k|k-1}=\left[
@@ -143,6 +155,7 @@ $$
 $$
 
 对于过程噪声协方差矩阵,为:
+
 $$
 \begin{aligned}
     Q = 2 \alpha
@@ -153,7 +166,9 @@ $$
     \end{bmatrix}
 \end{aligned}
 $$
+
 其中,
+
 $$
 \begin{aligned}
     \left \{
@@ -171,6 +186,7 @@ $$
 \right.
 \end{aligned}
 $$
+
 $$
 \begin{aligned}
     \sigma ^2 =
@@ -183,31 +199,38 @@ $$
 $$
 
 对于加速度方差$\sigma$在每个轴上的分量如式表示
+
 $$
 \begin{aligned}
     \sigma_{i}^{2}=\left\{\begin{array}{l l}{{\displaystyle\frac{4-\pi}{\pi}[a_{\mathrm{max}}-a]^{2}\mathrm{~,~}0<a<a_{\mathrm{max}}}}\\ {{\displaystyle\frac{4-\pi}{\pi}[a_{\mathrm{-max}}+a]^{2}\mathrm{~,~}a_{\mathrm{-max}}<a<0}}\end{array}\right.
     \quad ,i = x, y,z
 \end{aligned}
 $$
+
 在本文中,假设 $a_{max} = 15$, $a_{-max} = -15$ .
 
 ### 系统量测方程
 
 无人机量测数据为量测高低角$\gamma$和量测方位角$\eta$.三架无人机即测量三架无人机以及
 量测高低角/方位角定义:
+
 $$
 \begin{aligned}
     \left\{\begin{array}{l}{{\gamma_{i}=\arcsin\left(\frac{\displaystyle y_{r s,i}}{\displaystyle\sqrt{x_{r s,i}^{2}+y_{r s,i}^{2}+z_{r s,i}^{2}}}\right)}} + v_{\gamma,i}\\
     {{\displaystyle\eta_{i}=\arctan2\left(-z_{r s,i},x_{r s,i}\right) + v_{\eta, i}}}\end{array}\right.
 \end{aligned}
 $$
+
 无人机与目标之间的相对距离需要转化至地面坐标系上,所以有:
+
 $$
 \begin{aligned}
     \left[\begin{array}{c}{{x_{r s,i}}}\\ {{y_{r s,i}}}\\ {{z_{r s,i}}}\\ \end{array}\right]=C_{d}^{s_{i}}\left[\begin{array}{c}{{x-x_{s,i}}}\\ {{y-y_{s,i}}}\\ {{z-z_{s,i}}}\end{array}\right]
 \end{aligned}
 $$
+
 所以,系统的量测方程为式:
+
 $$
 \begin{aligned}
     z =
@@ -221,6 +244,7 @@ $$
     \end{array}\right]
 \end{aligned}
 $$
+
 其中 $[x~y~z]^T$ 为目标地面系下位置,  $[x_{s,t}, y_{s,t}, z_{s,t}]]^T$ 为第以架无人机地面系的位置, $C_d^{s_i}$ 为地面系到第  $i$ 架无人机本体系的坐标转换矩阵,在仿真条件5下为 $C_d^{s_i}$ 单位阵.
 
 ### 仿真与分析
