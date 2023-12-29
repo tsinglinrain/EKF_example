@@ -170,7 +170,6 @@ $$
 其中,
 
 $$
-\begin{aligned}
     \left \{
     \begin{array}{lll}
     q_{11} = \dfrac{(2\alpha^3T^3-6\alpha^2T^2+6\alpha T+3-12\alpha T e^{-\alpha*T}-3e^{-2\alpha T})}{6\alpha^5};\\
@@ -184,7 +183,6 @@ $$
     q_{33} = \dfrac{1-e^{-2\alpha T}}{2\alpha};
 \end{array}
 \right.
-\end{aligned}
 $$
 
 $$
