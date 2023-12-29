@@ -40,12 +40,10 @@ $$
 
 式中, $Q_k$ 为过程噪声方差矩阵; $R_k$ 为量测噪声方差阵.
 
-将非线性状态方程$f(\cdot)$在状态估计值$\hat{x}_{k-1}$附近展成一阶Taylor级数,可得
+将非线性状态方程 $f(\cdot)$ 在状态估计值 $\hat{x}_{k-1}$ 附近展成一阶Taylor级数,可得
 
 $$
-\begin{aligned}
-    f(x_{k-1})\approx f(\hat{x}_{k-1})+\frac{\partial f}{\partial x}\biggl\vert_{\hat{x}_{k-1}}\,(x_{k-1}-\hat{x}_{k-1}) + w_{k-1}
-\end{aligned}
+f(x_{k-1})\approx f(\hat{x}{k-1})+\dfrac{\partial f}{\partial x}\biggl\vert{\hat{x}{k-1}},(x{k-1}-\hat{x}{k-1}) + w{k-1}
 $$
 
 式中,
@@ -65,9 +63,7 @@ $$
 同理,将非线性量测方程 $h_k(\cdot)$ 在状态估计值 $\hat{x}_{k|k-1}$ 附近展开成一阶Taylor级数,可得
 
 $$
-\begin{aligned}
-    z_k \approx \left.\hat{h}(\hat{x}_{k}|_{k-1})+\frac{\partial\hat{h}}{\partial x}\right|_{\hat{x}_{k}|k-1} (x_{k}-\hat{x}_{k}|_{k-1})
-\end{aligned}
+z_k \approx \hat{h}(\hat{x}|)+\frac{\partial\hat{h}}{\partial x}-\hat{x}_{k}|)
 $$
 
 式中,
@@ -87,9 +83,7 @@ $$
 令
 
 $$
-\begin{aligned}
     \left.\begin{array}{l}{{H_{k}=\left.\dfrac{\partial h}{\partial x}\right|_{\hat{x}_{k|k-1}}}}\\ {{\left.\zeta_{k}= h(\hat{x}_{k|k-1})-\dfrac{\partial h}{\partial x}\right|_{\hat{x}_{k|k-1}}\hat{x}_{k|k-1}}}\end{array} \right\}
-\end{aligned}
 $$
 
 则非线性量测方程的一阶线性化结果为:
@@ -109,12 +103,12 @@ $$
 ### 仿真条件
 
 1. 初始时刻,地面系下目标状态位置初值:
-    $p=[x, y, z]=[653.42,567.81,590.61] ~m$;
-    速度初值:$v=[v_x,v_y,v_z]=[89.93,61.87,84.41] ~m/s$;
-    加速度初值:$a=[a_x,a_y,a_z]~m/s^2$;
-    目标状态初值的误差:位置误差$\Delta p =[500,500,500]$;
-    速度误差$\Delta v = [50, 50, 50]$;
-    加速度$\Delta a = [5,5,5]$(用于构造误差协方差矩阵初值).
+    $p=[x, y, z]=[653.42,567.81,590.61] ~m$ ;<br>
+    速度初值: $v=[v_x,v_y,v_z]=[89.93,61.87,84.41] ~m/s$ ;<br>
+    加速度初值: $a=[a_x,a_y,a_z]~m/s^2$ ;<br>
+    目标状态初值的误差:位置误差 $\Delta p =[500,500,500]$ ;<br>
+    速度误差 $\Delta v = [50, 50, 50]$ ;<br>
+    加速度 $\Delta a = [5,5,5]$ (用于构造误差协方差矩阵初值).
 
 2. 目标运动模型选用\"当前\"统计模型,机动系数可选为$\dfrac{1}{60}$;
 
@@ -124,9 +118,9 @@ $$
 
 5. 不考虑无人机姿态变化,并假设无人机本体系与地面系重合.
 
-### \"当前\"统计模型
+### "当前"统计模型
 
-以地理系为参考坐标系,选取地理系下目标运动的位置$(x,y,z)$,速度$(v_x,v_y,v_z)$,加速度$(a_x,a_y,a_z)$为状态变量,有
+以地理系为参考坐标系,选取地理系下目标运动的位置 $(x,y,z)$ ,速度 $(v_x,v_y,v_z)$ ,加速度 $(a_x,a_y,a_z)$ 为状态变量,有
 
 $$
 \begin{aligned}
@@ -196,7 +190,7 @@ $$
 \end{aligned}
 $$
 
-对于加速度方差$\sigma$在每个轴上的分量如式表示
+对于加速度方差 $\sigma$ 在每个轴上的分量如式表示
 
 $$
 \begin{aligned}
