@@ -224,15 +224,15 @@ $$
 
 可以看出,在给定40s的时间范围内,应用扩展卡尔曼滤波,对系统状态进行最优最优估计,可以对目标的位置进行较好的估计,但是对速度和加速度的估计较差.
 
-<img src="Fig/预测运动轨迹与真实轨迹三维.png" alt="三维预测运动轨迹与真实轨迹" style="zoom: 50%;" />
+<img src="fig/预测运动轨迹与真实轨迹三维.png" alt="三维预测运动轨迹与真实轨迹" style="zoom: 50%;" />
 
-<img src="Fig/三轴位置跟踪曲线.png" alt="三轴位置跟踪曲线" style="zoom:50%;" />
+<img src="fig/三轴位置跟踪曲线.png" alt="三轴位置跟踪曲线" style="zoom:50%;" />
 
-<img src="Fig/位置误差曲线.png" alt="位置误差曲线" style="zoom:50%;" />
+<img src="fig/位置误差曲线.png" alt="位置误差曲线" style="zoom:50%;" />
 
-<img src="Fig/速度误差曲线.png" alt="速度误差曲线" style="zoom:50%;" />
+<img src="fig/速度误差曲线.png" alt="速度误差曲线" style="zoom:50%;" />
 
-<img src="Fig/加速度误差曲线.png" alt="加速度误差曲线" style="zoom:50%;" />
+<img src="fig/加速度误差曲线.png" alt="加速度误差曲线" style="zoom:50%;" />
 
 ## 附录
 
