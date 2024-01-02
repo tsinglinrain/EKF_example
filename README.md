@@ -28,7 +28,7 @@ $$
     z_k = h(x_k) + v_k
 $$
 
-式中, $f(\cdot)$ 和 $h(\cdot)$ 为非线性方程;$w_{k-1}$和$v_k$为互不相关的高斯高斯白噪声,
+式中, $f(\cdot)$ 和 $h(\cdot)$ 为非线性方程; $w_{k-1}$ 和 $v_k$ 为互不相关的高斯高斯白噪声,
 其噪声统计特性为:
 
 $$
@@ -83,7 +83,7 @@ $$
 令
 
 $$
-    \left.\begin{array}{l}{{H_{k}=\left.\dfrac{\partial h}{\partial x}\right|_{\hat{x}_{k|k-1}}}}\\ {{\left.\zeta_{k}= h(\hat{x}_{k|k-1})-\dfrac{\partial h}{\partial x}\right|_{\hat{x}_{k|k-1}}\hat{x}_{k|k-1}}}\end{array} \right\}
+    \left.\begin{array}{l}{{H_{k}=\left.\dfrac{\partial h}{\partial x}\right|_{\hat{x}_{k|k-1}}}}\\ {{\left.\zeta_{k}= h({\hat{x}})-\dfrac{\partial h}{\partial x}\right{{x_{k|k-1}}}\hat{x}_{k|k-1}}}\end{array} \right\}
 $$
 
 则非线性量测方程的一阶线性化结果为:
@@ -110,11 +110,11 @@ $$
     速度误差 $\Delta v = [50, 50, 50]$ ;<br>
     加速度 $\Delta a = [5,5,5]$ (用于构造误差协方差矩阵初值).
 
-2. 目标运动模型选用\"当前\"统计模型,机动系数可选为$\dfrac{1}{60}$;
+2. 目标运动模型选用\"当前\"统计模型,机动系数可选为 $\dfrac{1}{60}$;
 
-3. 导引头测角噪声为零均值高斯噪声,标准差$\sigma = 0.5^{\circ}$;
+3. 导引头测角噪声为零均值高斯噪声,标准差 $\sigma = 0.5^{\circ}$;
 
-4. 导引头测量帧频为 $10\mathrm{HZ}$ ,共$40\mathbf{s}$;
+4. 导引头测量帧频为 $10\mathrm{HZ}$ ,共 $40\mathbf{s}$;
 
 5. 不考虑无人机姿态变化,并假设无人机本体系与地面系重合.
 
